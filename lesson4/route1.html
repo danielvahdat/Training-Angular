@@ -1,0 +1,23 @@
+<html ng-app="myApp">
+<body>
+<script src="controller.js"></script>
+<div class="container">
+  <div class=head>
+    <h3>your data has saved successfully</h3>
+  </div>
+  <div class="form" ng-controller="controller">
+  <div class="row">
+    <div class="col-sm-6"><strong>name:</strong>{{Name()}}</div>
+    <div class="col-sm-6"><strong>pwd:</strong>{{Pwd()}}</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6"><strong>interview:</strong>{{Int()}}</div>
+    <div class="col-sm-6"><strong>nationality:</strong>{{Nation()}}</div>
+  </div>
+  <div class="row">
+   <div class="col-sm-6"><strong>favorites:</strong>{{Art(art)}} {{Sport()}} {{Poem()}} {{Music()}}</div>
+   <div class="col-sm-6"><strong>Gender:</strong>{{RadioValue()}}</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+ .section {
+margin-bottom:40px;
+}
+.selectpicker{
+ height:40px;
+ font-size:20px;
+}
+.selectpicker option {
+font-size:20px;
+}
+.container{
+background-color:#A69B9B;
+margin-bottom:70px;
+}
+.footer{
+margin-bottom:25px;
+}
+.main{
+height:100%;
+background-color:#C8BDBD;
+}
+.header{
+margin-left:100px;
+margin-top:20px;
+}
+h3 {
+color:green;
+}

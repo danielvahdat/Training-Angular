@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+ <head lang="en">
+  <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="text.css">
+ </head>
+ <body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+ <script src="http://monospaced.github.io/angular-elastic/elastic.js"></script>
+  <script src="controller.js"></script>
+  <div class="main">
+   <div class="header">
+    <h1>Please complete this form</h1>
+   </div>
+    <div class="container">
+  <form name="userForm" ng-submit="submitForm()" novalidate> 
+    <div class="section">
+   <div class="row">
+     <div class="col-sm-6">
+     <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
+            <label>Name:</label>
+            <input type="text" name="name" class="form-control" ng-model="name" required>
+            <p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">Your name is required.</p>
+        </div>
+    </div>
+     <div class="col-sm-6">
+      <div class="form-group" ng-class="{ 'has-error' : userForm.pwd.$invalid && !userForm.pwd.$pristine }">
+            <label>password</label>
+            <input type="text" name="pwd" class="form-control" ng-model="pwd" ng-minlength="4" ng-maxlength="8" required>
+            <p ng-show="userForm.pwd.$error.minlength" class="help-block">Username is too short.</p>
+            <p ng-show="userForm.pwd.$error.maxlength" class="help-block">Username is too long.</p>
+        </div>
+        </div> 
+    </div>
+  </div>
+  <div class="section">
+  <div class="row">
+    <div class="form-group">
+      <div class="col-sm-6"><strong>write about yourself</strong><br> <textarea class="animate msd-elastic: \n;" data-ng-model="inter"></textarea></br></div>
+      <div class="col-sm-6"><strong>select your country</strong><br>
+        <select class="selectpicker" ng-model="nation" required>
+          <option>Iran</option>
+          <option>Italy</option>
+          <option>Russia</option>
+          <option>United State of America</option>
+          <option> other countries</option>
+      </select>
+      </br>
+     </div>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <div class="row">
+    <div class="form-group">
+      <div class="col-sm-6"><strong>please select your favorites</strong>
+        <br>
+       <label class="checkbox-inline"><input type="checkbox" ng-model="art"  value="Art">Art</label>
+       <label class="checkbox-inline"><input type="checkbox" ng-model="sport"  value="Sport">Sport</label>
+       <label class="checkbox-inline"><input type="checkbox" ng-model="poem"  value="Poem">poem</label>
+       <label class="checkbox-inline"><input type="checkbox" ng-model="music"  value="Music">music</label>
+         </br>
+     </div>
+    <div class="col-sm-6"><strong>Gender</strong>
+       <br>
+    <form name="myForm"> 
+     <label><input type="radio" name="test" ng-model="radioValue" value="male"/ required> male</label>
+     <label><input type="radio" name="test" ng-model="radioValue" value="female"/ required> female</label>
+    </form>
+       </br>
+     </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <a ui-sref="route1"><button type="button" class="btn btn-info btn-block" ng-click="submit()" ng-disabled="userForm.$invalid">submit</button></a>
+</div>
+</form>
+  </div>
+  <div ui-view></div>
+</div>
+  </body>
+</html>
+
