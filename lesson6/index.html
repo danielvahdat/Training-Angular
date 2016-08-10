@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+ <head lang="en">
+  <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="angular-tooltips/dist/angular-tooltips.min.css" rel="stylesheet" type="text/css" />
+ </head>
+ <body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+  <script src="controller.js"></script>
+<div class="container">
+<table class="table table-inverse" ng-controller="myCtrl" border="1">
+   <thead>
+    <tr>
+     <th>Full Name</th>
+     <th>Age</th>
+     <th>Mail</th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr ng-repeat="x in records">
+     <th>{{x.Name}}</th>
+     <th>{{x.Age}}
+     <th>{{x.Mail}}</th>
+    </tr>
+   </tbody>
+</table>
+<business-Heading></business-Heading>
+<a bt-tooltip='This is a tooltip'>there is a tooltip</a> 
+</div>
+</body>
