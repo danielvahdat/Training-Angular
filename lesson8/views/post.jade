@@ -1,0 +1,31 @@
+div(ng-controller='postController')
+.heading
+  nav.navbar.navbar-inverse
+    .container-fluid
+      .navbar-header
+        a.navbar-brand(href='#') GeekHouse
+      ul.nav.navbar-nav
+        li
+          a(ui-sref='home') Home
+      ul.nav.navbar-nav.navbar-right
+        li
+          a(ui-sref='login') Login
+.row
+  .col-md-4
+  .col-md-4
+    span.title {{selectedPost.title}}
+    br
+    textarea {{selectedPost.body}}
+    br
+    span.detail {{selectedPost.author}}
+      span.floatRight.white Name:
+      br
+      input.form-control(type='text', placeholder='Your Name')
+      br
+      span  Comment:
+      br
+      textarea
+      br
+      button.btn.regbtn register
+  .col-md-4
+
