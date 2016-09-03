@@ -1,0 +1,30 @@
+div(ng-controller='loginController')
+.heading
+  nav.navbar.navbar-inverse
+    .container-fluid
+      .navbar-header
+        a.navbar-brand(href='#') GeekHouse
+      ul.nav.navbar-nav
+        li
+          a(ui-sref='register') register
+      ul.nav.navbar-nav.navbar-right
+        li
+          a(ui-sref='login') Login
+  .row
+    .col-sm-4
+    .col-sm-4
+      .login
+        .inform
+          label Email:
+          input.form-control(type='text', ng-model='emailModel', placeholder='Id', aria-describedby='email')
+          br
+          label Password:
+          input.form-control(type='password', ng-model='passModel', placeholder='Password')
+          br
+          .row
+            .col-sm-4
+              button.btn.regbtn(ng-click='login()') login 
+            .col-sm-4
+            .col-sm-4.forgot
+              button.btn.regbtn() forgot password
+    .col-sm-4

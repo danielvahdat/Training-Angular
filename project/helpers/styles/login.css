@@ -1,0 +1,14 @@
+.login{
+background-color:gray;
+margin-top:70px;
+}
+.inform{
+padding:28px;
+}
+.btn:hover{
+background-color:black;
+color:white;
+}
+.forgot{
+padding-right:28px;
+}

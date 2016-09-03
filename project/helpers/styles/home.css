@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+    padding:0;
+}
+.sidebar, .content{
+    color: #fff;
+    height: 530px;
+    border-radius: 4px;
+   
+}
+.sidebar{
+    background-color:black;
+    width: 170px;
+    /* float:left  Removed*/
+    left:0; /* Added */
+    top:0; /* Added */
+    position: absolute;
+    margin-top:85px;
+    margin-left:13px;
+}
+.content{
+    width: 1166px;
+    margin-left:174px;
+    text-align:center;
+}
+.sidebox{
+    height:40px;
+    border-radius:5px;
+}
+.sidebox:hover{
+background-color:#333;
+}
+.sidebox h4{
+text-align:center;
+padding-top:11px;
+}
+a:hover {
+text-decoration:none;
+}
